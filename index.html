@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>YouTubeをモーダルで再生</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/script.js" defer></script>
+</head>
+<body>
+	<h1>YouTubeをモーダルで再生</h1>
+	<p>ボタンを押すと自動再生される</p>
+	<button class="js-yt-trigger" data-yt-id="ioQu49asR7c">動画1を再生</button>
+	<button class="js-yt-trigger" data-yt-id="tAxcgLdFHrw">動画2を再生</button>
+
+	<div class="js-yt-overlay overlay"></div>
+	<div class="js-yt modal">
+		<div class="modal__inner">
+			<div class="js-yt-video" id="ioQu49asR7c"></div>
+			<div class="js-yt-video" id="tAxcgLdFHrw"></div>
+		</div>
+		<div class="js-yt-close close"></div>
+	</div>
+
+</body>
+</html>

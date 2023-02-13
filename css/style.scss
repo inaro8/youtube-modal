@@ -1,0 +1,95 @@
+/**
+ * YouTube Modal
+ */
+// 背景固定
+html,body {
+	&.is-fixed {
+		overflow: hidden;
+	}
+}
+
+// 周りの黒い部分
+.overlay {
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 100vh;
+	background: rgba(#000, .7);
+	cursor: pointer;
+	transition: opacity .6s, visibility .6s;
+	&.is-open {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+// モーダル本体
+.modal {
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 1001;
+	transform: translate(-50%,-50%);
+	width: calc(100% - 40px);
+	max-width: 1000px;
+	max-height: 75vh;
+	background: #fff;
+	transition: opacity .6s, visibility .6s;
+	&.is-open {
+		opacity: 1;
+		visibility: visible;
+	}
+	.modal__inner {
+		display: flex;
+		iframe {
+			display: none;
+			width: 100%;
+			height: auto;
+		}
+		&::before {
+			content: '';
+			display: block;
+			width: 0;
+			height: 0;
+			padding-top: 56.25%;
+		}
+	}
+}
+
+// 閉じるボタン
+.close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	background: #000;
+	cursor: pointer;
+	&::before,
+	&::after {
+		content: "";
+		display: inline;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		transform: rotate(45deg);
+		margin: auto;
+		background: #fff;
+	}
+	&::before {
+		width: 30px;
+		height: 2px;
+	}
+	&::after {
+		width: 2px;
+		height: 30px;
+	}
+}
