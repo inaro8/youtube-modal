@@ -9,5 +9,5 @@ YouTubeをモーダルで再生
 ## 使い方
 ボタンのdata属性(data-yt-id)の値と、モーダルのidをYouTubeの動画IDにする
 
-##　参考サイト
+## 参考
 https://designsupply-web.com/media/programming/6548/
