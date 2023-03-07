@@ -6,7 +6,6 @@ tag.src = "https://www.youtube.com/iframe_api";
 const firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-const html = document.documentElement;
 const body = document.body;
 const videoTriggers = document.querySelectorAll('.js-yt-trigger');
 const videoContent = document.querySelector('.js-yt');
@@ -35,7 +34,6 @@ function onYouTubeIframeAPIReady() {
 	const startVideo = (videoId) => {
 		videoContent.classList.add("is-open");
 		videoOverlay.classList.add("is-open");
-		html.classList.add("is-fixed");
 		body.classList.add("is-fixed");
 
 		const targetVideo = players.filter((player) => {
@@ -52,7 +50,6 @@ function onYouTubeIframeAPIReady() {
 	const stopVideo = () => {
 		videoContent.classList.remove('is-open');
 		videoOverlay.classList.remove('is-open');
-		html.classList.remove('is-fixed');
 		body.classList.remove('is-fixed');
 
 		const targetVideo = players.filter(player => {
