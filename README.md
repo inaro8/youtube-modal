@@ -10,7 +10,7 @@ YouTubeをモーダルで再生
 ボタンのdata属性(data-yt-id)の値と、モーダルのidをYouTubeの動画IDにする
 
 ## デモ
-https://inaro8.github.io/youtube-modal/
+https://tusch8.github.io/youtube-modal/
 
 ## 参考にさせていただいたサイト
 https://designsupply-web.com/media/programming/6548/
